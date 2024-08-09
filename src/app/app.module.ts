@@ -17,13 +17,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { HeroConfirmDialogComponent } from './components/hero-confirm-dialog/hero-confirm-dialog.component';
+import { LettersOnlyPipe } from './pipes/letters-only.pipe';
+import { UppercaseDirective } from './directives/uppercase.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroListComponent,
     HeroDialogComponent,
-    HeroConfirmDialogComponent
+    HeroConfirmDialogComponent,
+    LettersOnlyPipe,
+    UppercaseDirective,
   ],
   imports: [
     BrowserModule,

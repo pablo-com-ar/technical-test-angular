@@ -3,7 +3,7 @@
   <form [formGroup]="heroForm">
     <mat-form-field appearance="fill" class="full-width">
       <mat-label>Nombre</mat-label>
-      <input matInput formControlName="nombre">
+      <input matInput formControlName="nombre" [appUppercase]="heroForm.get('nombre')?.value">
       <mat-error *ngIf="heroForm.get('nombre')?.hasError('required')">
         El nombre es requerido.
       </mat-error>
@@ -11,7 +11,7 @@
 
     <mat-form-field appearance="fill" class="full-width">
       <mat-label>Poder</mat-label>
-      <input matInput formControlName="poder">
+      <input matInput formControlName="poder" [appUppercase]="heroForm.get('poder')?.value">
       <mat-error *ngIf="heroForm.get('poder')?.hasError('required')">
         El poder es requerido.
       </mat-error>
